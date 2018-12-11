@@ -1,0 +1,228 @@
+@charset "UTF-8";
+
+body {
+  margin-top: -30px;
+  color: #FFF;
+  font-size: 35px;
+  font-family: sans-serif;
+  text-align: center;
+  height: 100%;
+  background-color: #019934;
+}
+
+/* TROCA DE PÁGINAS */
+.login{
+  display: block;
+  background-color: #019934;
+  height: 1200px;
+}
+.login-padding-screen {
+    margin-top: 341px;
+}
+.button-logins {
+  padding-top: 50px;
+}
+.button-entrar {
+  font-size: 48px;
+}
+.newUser{
+  display: none;
+  background-color: #019934;
+  height: 1200px;
+}
+.newUser h1 {
+  text-align: center;
+}
+.newUser p {
+      font-size: 50px;
+    padding-top: 21px;
+    margin-bottom: 0px;
+    margin-top: 108px;
+}
+.newFilial{
+  display: none;
+  background-color: #019934;
+  height: 1200px;
+}
+.newFilial-style {
+  padding-top: 68%;
+}
+.newFilial-style p {
+    padding-bottom: 81px;
+    font-size: 68px;
+}
+.filialList{
+  display: none;
+  background-color: #019934;
+  height: 1200px;
+}
+.filialList h1 {
+  text-align: center;
+}
+.input-cadastrar-botao {
+  width: 308px !important;
+  height: 134px !important;
+  font-size: 70px;
+}
+.recPassword{
+  display: none;
+  background-color: #019934;
+  height: 1200px;
+}
+.padding-screen {
+  padding-top: 68%;
+}
+.padding-screen p {
+  padding-bottom: 81px;
+  font-size: 49px;
+}
+.page1{
+  display: none;
+  background-color: #019934;
+  height: 1200px;
+}
+.page1 h1 {
+  text-align: center;
+}
+.page2{
+  display: none;
+  background-color: #019934;
+  height: 1200px;
+}
+.page2 h1 {
+  text-align: center;
+}
+.page1 p, .page2 p, .page3 p {
+  font-size: 50px;
+  padding-top: 60px;
+}
+
+.button-next-back-1 {
+  margin-top: 243px;
+ }
+
+.button-next-back-2 {
+  margin-top: 504px;
+}
+
+.button-next-back-3 {
+  margin-top: 289px;
+}
+
+.page3{
+  display: none;
+  background-color: #019934;
+  height: 1200px;
+}
+
+.finish{
+  display: none;
+  background-color: #019934;
+  height: 1200px;
+}
+
+.propostas1{
+  display: none;
+  background-color: #019934;
+  height: 1200px;
+}
+
+
+
+h1{
+  height: 120px;
+  padding-left: 30px;
+  font-weight: 100;
+  text-align: left;
+  color: #FFF;
+  margin-top: 100px;
+}
+
+.login-title{
+  text-align: center;
+  font-size: 60px;
+  height: 130px;
+}
+
+.filial-button{
+  font-size: 40px;
+  font-weight: bold;
+  color: #FFF;
+  text-transform: uppercase;
+  background-color: #129c49;
+}
+
+.button-login{
+  background-color: #019934;
+  border-style: hidden;
+  color: #FFF;
+  font-size: 30px;
+}
+
+.button-page-3 {
+   background-color: #019934;
+  border-style: double;
+  color: #FFF;
+  padding: 9px;
+  font-size: 68px;
+}
+
+.button-filial{
+  background-color: #019934;
+  color: #FFF;
+  border-style: double;
+  padding: 9px;
+  font-size: 68px;
+  width: 560px;
+}
+
+.button-filial-list{
+  background-color: #019934;
+  border-style: hidden;
+  color: #FFF;
+  font-size: 50px;
+}
+.forward-backward {
+  position: relative;
+  top: -87px;
+}
+.entrar{
+  border-style: double;
+  padding: 9px;
+  font-size: 68px;
+}
+
+h1 .title-geral{
+  background-color: black;
+}
+
+
+input{
+  border-color: #cce0c1;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #019934;
+    width: 300px;
+        height: 35px;
+    font-size: 40px;
+}
+::placeholder {
+  color: #cecc;
+  text-align: center;
+}
+.input-login {
+  padding: 40px;
+}
+
+.dados-login{
+  padding: 20px;
+}
+
+.dados-login p{
+  margin-bottom: -20px;
+}
+
+.list{
+  padding: 200px;
+}

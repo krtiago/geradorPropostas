@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exercícios JS</title>
+
+    <style>
+
+      body{
+
+        text-align: center;
+        font-family: sans-serif;
+      }
+
+      img{
+        max-width: 70%;
+        padding: 20px;
+      }
+
+      button{
+        cursor: pointer;
+        font-size: 14px;
+        color: #FFF;
+        border: 1px solid #a5a6a0;
+        border-color: #707269;
+        box-shadow: #1d1d1b 3px 3px 1px;
+        background-color: #44443a;
+        border-radius: 30px;
+        display: inline-block;
+        margin: auto;
+      }
+    </style>
+
+    <script type="text/javascript">
+
+    //TRONCOS
+      var troncosDigitais;
+      var troncosAnalogicos;
+      var troncosGSM;
+      var troncosIP;
+
+      //decisão centrais
+      var central;
+      //decisão placa
+      var placa;
+      var placaRD;
+      var placaRA;
+      var placaTroncoIP;
+      var placaTroncoAn;
+      var placaTroncoGSM;
+      //decisão acessórios
+      var acessorioRamal;
+      var acessorioTronco;
+
+      troncosDigitais = parseInt(prompt("Troncos digitais (1-60):"));
+      while(troncosDigitais < 1 || troncosDigitais > 60){
+        troncosDigitais = parseInt(prompt("Por favor, digite um valor válido. Troncos digitais (1-60):"));
+      }
+      troncosAnalogicos = parseInt(prompt("Troncos Analógicos (1-24):"));
+      while(troncosAnalogicos < 1 || troncosAnalogicos > 24){
+        troncosAnalogicos = parseInt(prompt("Por favor, digite um valor válido. Troncos Analógicos (1-24):"));
+      }
+      troncosGSM = parseInt(prompt("Troncos GSM (1-24):"));
+      while(troncosGSM < 1 || troncosGSM > 24){
+        troncosGSM = parseInt(prompt("Por favor, digite um valor válido. Troncos GSM (1-24):"));
+      }
+      troncosIP = parseInt(prompt("Troncos IP (1-60):"));
+      while(troncosIP < 1 || troncosIP > 60){
+        troncosIP = parseInt(prompt("Por favor, digite um valor válido. Troncos IP (1-60):"));
+      }
+
+
+    //document.write("Troncos digitais: " + troncosDigitais + "<br>" + "Troncos analógicos: " + troncosAnalogicos + "<br>" + "Troncos GSM: " + troncosGSM + "<br>" + "Troncos IP: " + troncosIP);
+
+      //RAMAIS
+        //* validar valor nulo
+      var ramalDigital;
+      var ramalAnalogico;
+      var ramalIP;
+
+      var comDisplay;
+      var semDisplay;
+      var comVideo;
+      var softphone;
+      //variavel para manipular campos dinamicos de ramais
+      var totalRamais;
+
+
+      var cont = 0;
+
+      while(cont == 0){
+
+        ramalDigital = parseInt(prompt("Ramal digital (1-48):"));
+        while(ramalDigital > 48){
+          ramalDigital = parseInt(prompt("Por favor, digite um valor válido. Ramal digital (1-48):"));
+        }
+
+        if(ramalDigital != 0){
+          cont++;
+        }
+
+        ramalAnalogico = parseInt(prompt("Ramal analógico (1-160):"));
+        while(ramalAnalogico > 160){
+          ramalAnalogico = parseInt(prompt("Por favor, digite um valor válido. Ramal analógico (1-160):"));
+        }
+
+        if(ramalAnalogico != 0){
+          cont++;
+        }
+
+        ramalIP = parseInt(prompt("Ramal IP (1-120):"));
+        while(ramalIP > 120){
+          ramalIP = parseInt(prompt("Por favor, digite um valor válido. Ramal IP (1-120):"));
+        }
+
+
+        if(ramalIP != 0){
+          cont++;
+          //atribui valor para ser manipulado
+          totalRamais = ramalIP;
+
+          comDisplay = parseInt(prompt("Com display (1-" + totalRamais + "):"));
+
+          while(comDisplay < 0 || comDisplay > totalRamais){
+            comDisplay = parseInt(prompt("Por favor, digite um valor válido. Com display (1-" + totalRamais + "):"));
+          }
+
+          totalRamais = totalRamais - comDisplay;
+
+          semDisplay = parseInt(prompt("Sem display (1-" + totalRamais + "):"));
+          while(semDisplay < 0 || semDisplay > totalRamais){
+            semDisplay = parseInt(prompt("Por favor, digite um valor válido. Sem display (1-" + totalRamais + "):"));
+          }
+
+          totalRamais = totalRamais - semDisplay;
+
+          comVideo = parseInt(prompt("Com vídeo (1-" + totalRamais + "):"));
+          while(comVideo < 0 || comVideo > totalRamais){
+            comVideo = parseInt(prompt("Por favor, digite um valor válido. Com vídeo (1-" + totalRamais + "):"));
+          }
+
+          totalRamais = totalRamais - comVideo;
+
+          softphone = parseInt(prompt("Softphone (1-" + totalRamais + "):"));
+          while(softphone < 0 || softphone > totalRamais){
+            softphone = parseInt(prompt("Por favor, digite um valor válido. Softphone (1-" + totalRamais + "):"));
+          }
+        }
+
+        if(cont == 0){
+          alert("Por favor, digite ao menos um ramal válido.");
+        }
+        var ramaisCentral = ramalDigital + ramalAnalogico;
+        //decisão de central
+        if(ramaisCentral <= 96){
+          central = "CENTRAL UNNITI 2000";
+          document.write(central + "<br>");
+        } else if (ramaisCentral > 96 && ramaisCentral < 160){
+          central = "CENTRAL UNNITI 3000";
+          document.write(central + "<br>");
+        } else {
+          document.write("Central Mista <br>")
+        }
+      }
+
+        //decisão placas
+
+      if(troncosIP != 0){
+        placaTroncoIP = "PLACA CODEC 60";
+        document.write(placaTroncoIP + "<br>");
+      }
+      if (troncosDigitais <= 30) {
+        placa = "1E1 R2/RDSI";
+        document.write(placa + "<br>");
+      } else if (troncosDigitais > 30 && troncosDigitais <= 60){
+        placa = "2E1 R2/RDSI";
+        document.write(placa + "<br>");
+      }
+
+      if(ramalDigital <= 4){
+        placaRD = "PLACA 4 RD";
+        document.write(placaRD + "<br>");
+      } else if(ramalDigital <= 12){
+        placaRD = "PLACA 12 RD";
+        document.write(placaRD + "<br>");
+      }
+
+      if(ramalAnalogico <= 16){
+        placaRA = "PLACA 16 RA";
+        document.write(placaRA + "<br>");
+      }
+      if(placaTroncoAn <= 8){
+        placaTroncoAn = "PLACA TRONCO ANALOGICO 8 TR";
+        document.write(placaTroncoAn + "<br>");
+      }
+      if(placaTroncoGSM <= 4){
+        placaTroncoGSM = "PLACA TRONCO GSM 4 CANAIS";
+        document.write(placaTroncoGSM + "<br>");
+      }
+
+        //acessórios
+      if(ramalIP != 0){
+        acessorioRamal = "LICENÇA DE RAMAL IP";
+        document.write(acessorioRamal + "<br>");
+      }
+
+      if(troncosIP != 0){
+        acessorioTronco = "LICENÇA DE TRONCO IP";
+        document.write(acessorioTronco + "<br>");
+      }
+
+
+
+
+    </script>
+
+  </head>
+  <body>
+  </body>
+</html>
