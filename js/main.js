@@ -90,7 +90,6 @@ function validarTroncos(){
       }
 
     if(cont == 4){
-    alert("entrou no else");
     document.getElementById('page2').style.display = "block";
     document.getElementById('page1').style.display = "none";
   }
@@ -126,7 +125,6 @@ function validarRamais(){
     }
 
   if(cont == 3){
-  alert("entrou no else");
   document.getElementById('page3').style.display = "block";
   document.getElementById('page2').style.display = "none";
 }
@@ -169,7 +167,6 @@ function validarAcessorios(){
     }
 
     if(cont == 4){
-    alert("entrou no else");
     document.getElementById('page3').style.display = "none";
     document.getElementById('finish').style.display = "block";
   }

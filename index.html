@@ -5,44 +5,42 @@
     <title>UnniTI - Gerador de propostas</title>
     <script src="js/main.js"></script>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="imgs/favicon.ico" type="image/x-icon">
   </head>
   <body>
     <div class="login" id="login">
       <h1 class="login-title">Gerenciador de propostas <br> UnniTI</h1>
       <div class="login-padding-screen">
         <div class="dados-login">
-            
-            <input class="input-login" type="text" name="email" value="" placeholder="E-mail">
-            <br>
-            <input class="input-login" type="password" name="password" value="" placeholder="Senha">
-          </div>
+           <input class="input-login" type="text" name="email" value="" placeholder="E-mail">
+           <br>
+           <input class="input-login" type="password" name="password" value="" placeholder="Senha">
+        </div>
           <p class="button-logins"><button type="button" name="entrar" onclick="entrar();" class="button-login button-entrar entrar">Entrar</button></p>
           <p class="button-logins"><button type="button" name="newUser" onclick="newUser();" class="button-login">Novo usuário</button></p>
           <p class="button-logins"><button type="button" name="recPassword" onclick="recPassword();" class="button-login">Esqueci minha senha</button></p>
         </div>
-      </div>
+     </div>
         <div class="newUser" id="newUser">
           <h1>Cadastro de usuário</h1>
           <p>Nome de usuário</p>
-          <input type="text" name="nome" value=""  placeholder="Usuário" class="input-login">
+            <input type="text" name="nome" value=""  placeholder="Usuário" class="input-login">
           <p>E-mail de acesso</p>
-          <input type="email" name="cadEmail" value="" placeholder="E-mail" class="input-login">
+            <input type="email" name="cadEmail" value="" placeholder="E-mail" class="input-login">
           <p>Senha </p>
-          <input type="password" name="newPassword" value="" placeholder="Senha" class="input-login">
+            <input type="password" name="newPassword" value="" placeholder="Senha" class="input-login">
           <p>Confirme sua senha</p>
-          <input type="password" name="newPasswordConf" value="" placeholder="Confirmar senha" class="input-login">
+            <input type="password" name="newPasswordConf" value="" placeholder="Confirmar senha" class="input-login">
           <p><button class="button-login entrar button-entrar" type="button" name="register" onclick="cadUsuario();">Cadastrar usuário</button></p>
         </div>
-       
-
     <div class="recPassword" id="recPassword">
       <div class="padding-screen">
         <p>E-mail para recuperação de senha</p>
-        <input type="text" name="recPassword-email" placeholder="E-mail">
+          <input type="text" name="recPassword-email" placeholder="E-mail">
         <p><button type="button" name="enviarRecPassword" onclick="enviarRecPassword();" class="button-login entrar">Enviar</button></p>
       </div>
     </div>
-
     <div class="newFilial" id="newFilial">
       <div class="newFilial-style"><p>Nome da filial</p>
         <form id="cadNameFilial">
@@ -51,7 +49,6 @@
         </form>
       </div>
     </div>
-
     <div class="filialList" id="filialList">
       <h1>Lista de filiais</h1>
       <div class="list">
@@ -64,47 +61,56 @@
         <button type="button" name="voltar" onclick="voltar();" class="button-filial-list">Voltar</button>
       </div>
     </div>
-
     <div class="page1" id="page1">
       <h1>Etapa 1 de 3: TRONCOS</h1>
       <p>Troncos digitais (0-60):</p>
-      <input type="number" name="" id="troncos-digitais" value="" placeholder="0-60">
+        <input type="number" name="" id="troncos-digitais" value="" placeholder="0-60">
       <p>Troncos analógicos (0-24):</p>
-      <input type="number" name="" id="troncos-analogicos" value="" placeholder="0-24">
+        <input type="number" name="" id="troncos-analogicos" value="" placeholder="0-24">
       <p>Troncos GSM (0-24):</p>
-      <input type="number" name="" id="troncos-GSM" value="" placeholder="0-24">
+        <input type="number" name="" id="troncos-GSM" value="" placeholder="0-24">
       <p>Troncos IP (0-60):</p>
-      <input type="number" name="" id="troncos-IP"value="" placeholder="0-60"><br>
+        <input type="number" name="" id="troncos-IP"value="" placeholder="0-60"><br>
       <div class="button-next-back-1">
         <button class="button-login button-entrar entrar" type="button" name="next1" onclick="validarTroncos();">Próximo</button>
       </div>
     </div>
-
     <div class="page2" id="page2">
       <h1>Etapa 2 de 3: RAMAIS</h1>
       <p>Ramal digital (1-48):</p>
-      <input type="number" name="" value="" id="ramais-digitais" placeholder="1-48">
+        <input type="number" name="" value="" id="ramais-digitais" placeholder="1-48">
       <p>Ramal analógico (1-160):</p>
-      <input type="number" name="" value="" id="ramais-analogicos" placeholder="1-160">
+        <input type="number" name="" value="" id="ramais-analogicos" placeholder="1-160">
       <p>Ramal IP (1-120):</p>
-      <input type="number" name="" value="" id="ramais-IP" placeholder="1-120"><br>
+        <input type="number" name="" value="" id="ramais-IP" placeholder="1-120"><br>
+     <div class="ramaisIp-campo"> 
+        <input class="paddings-class" type="number" name="" value="" placeholder="Com Display" id="com-display"><br><br>
+        <input class="paddings-class" type="number" name="" value="" placeholder="Sem Display" id="sem-display"><br><br>
+        <input class="paddings-class" type="number" name="" value="" placeholder="Com vídeo chamada" id="com-video"><br><br>
+        <input class="paddings-class" type="number" name="" value="" placeholder="Softphone" id="softphone"><br>
+      </div>
       <div class="button-next-back-2">
         <button class="button-login button-entrar entrar" type="button" name="back1" onclick="back1();">Anterior</button>&nbsp;&nbsp;&nbsp;
         <button class="button-login button-entrar entrar" type="button" name="next1" onclick="validarRamais();">Próximo</button>
       </div>
     </div>
-
     <div class="page3" id="page3">
-      
       <p>Etapa 3 de 3: ACESSÓRIOS</p>
-      <p>Com display (1-" + totalRamais + "):</p>
-      <input type="number" name="" value="" id="com-display">
-      <p>Sem display (1-" + totalRamais + "):</p>
-      <input type="number" name="" value="" id="sem-display">
-      <p>Com vídeo (1-" + totalRamais + "):</p>
-      <input type="number" name="" value="" id="com-video">
-      <p>Softphone (1-" + totalRamais + "):</p>
-      <input type="number" name="" value="" id="softphone"><br>
+      <p>Gravação de chamadas (0-8)</p>
+      <input placeholder="0-8" type="number" name="" value="" id="com-display">
+      <p>Correio de Voz (0-160)</p>
+      <input placeholder="0-160" type="number" name="" value="" id="sem-display">
+      <p>Mesa virtual (0-10)</p>
+      <input placeholder="0-10" type="number" name="" value="" id="com-video">
+      <p>DISA (0-20)</p>
+      <input placeholder="0-20" type="number" name="" value="" id="softphone"><br>
+      <div class="switcss">
+      <p>Tarifação de chamadas</p>
+        <label class="switch">
+        <input type="checkbox">
+        <span class="slider"></span>
+      </label>
+      </div>
       <div class="button-next-back-3">
         <button class="button-page-3" type="button" name="back2" onclick="back2();">Anterior</button>&nbsp;&nbsp;&nbsp;
         <button class="button-page-3" type="button" name="finish" onclick="validarAcessorios();">Finalizar</button>
